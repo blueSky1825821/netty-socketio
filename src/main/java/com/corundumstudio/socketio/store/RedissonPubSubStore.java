@@ -56,7 +56,7 @@ public class RedissonPubSubStore implements PubSubStore {
         RTopic topic = redissonSub.getTopic(name);
         int regId = topic.addListener(PubSubMessage.class, new MessageListener<PubSubMessage>() {
             @Override
-            public void onMessage(CharSequence channel, PubSubMessage msg) {
+            public void onMessage(CharSequence channel, PubSubMessage msg) {//只有连接信息，不包括消息内容
                 if (!nodeId.equals(msg.getNodeId())) {
                     listener.onMessage((T)msg);
                 }

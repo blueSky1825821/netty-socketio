@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/mystyle.css">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="author" content="John Doe">
+    <meta http-equiv="refresh" content="300">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- base url 前缀   -->
+    <!--    <base href="https://www.w3schools.com/" target="_blank">-->
+
+
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+<p><b>To understand this example, you should open this page on a phone or a tablet.</b></p>
+<img src="demo.png" alt="Chania" width="660" height="500">
+
+<h1>My Web Page</h1>
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+
+<h2>Computer Code</h2>
+<p>Some programming code:</p>
+
+<code>
+    x = 5;
+    y = 6;
+    z = x + y;
+</code>
+
+<pre>
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+</pre>
+
+<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+
+<p>Message from my computer:</p>
+<p><samp>File not found.<br>Press F1 to continue</samp></p>
+
+<p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the
+    vertical height.</p>
+
+</body>
+<script>
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    }
+</script>
+</html>

@@ -54,15 +54,14 @@ public class PacketDecoder {
             /**
             * double escaping is required for escaped new lines because unescaping of new lines can be done safely on server-side
             * (c) socket.io.js
-            *
-            * @see https://github.com/Automattic/socket.io-client/blob/1.3.3/socket.io.js#L2682
+            * @see <a href="https://github.com/Automattic/socket.io-client/blob/1.3.3/socket.io.js#L2682"/>
             */
             packet = packet.replace("\\\\n", "\\n");
 
             // skip "d="
             packet = packet.substring(2);
         }
-
+        //TODO 池化
         return Unpooled.wrappedBuffer(packet.getBytes(CharsetUtil.UTF_8));
     }
 
@@ -165,7 +164,7 @@ public class PacketDecoder {
         parseBody(head, frame, packet);
         return packet;
     }
-
+    //14:451-test,7[tt] 字符长度14 :header标记符 4 packetType 5subType 1-attachment个数 test,7 nsp,ackId [tt]附件内容
     private void parseHeader(ByteBuf frame, Packet packet, PacketType innerType) {
         int endIndex = frame.bytesBefore((byte)'[');
         if (endIndex <= 0) {

@@ -238,7 +238,9 @@ public class PacketEncoder {
             switch (packet.getType()) {
 
                 case PONG: {
-                    buf.writeBytes(packet.getData().toString().getBytes(CharsetUtil.UTF_8));
+                    if (packet.getData() != null) {
+                        buf.writeBytes(packet.getData().toString().getBytes(CharsetUtil.UTF_8));
+                    }
                     break;
                 }
 

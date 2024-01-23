@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click Me!</button>
+
+<script>
+    let text = "5";
+    document.getElementById("demo").innerHTML = text.padStart(4, "x");
+</script>
+
+<script>
+    const points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = myArrayMax(points);
+
+    function myArrayMax(arr) {
+        return Math.max.apply(null, arr);
+    }
+</script>
+
+<script>
+    const numbers = [45, 4, 9, 16, 25];
+    let sum = numbers.reduce(myFunction, 1);
+    numbers.reduceRight()
+
+    document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+    function myFunction(total, value) {
+        return total + value;
+    }
+</script>
+
+<script>
+    function sumAll() {
+        let sum = 0;
+        for(let i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+        return sum;
+    }
+    document.getElementById("demo").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+</script>
+
+<script>
+    document.getElementById("demo").innerHTML = Math.max.apply(function (a, b){return a-b}, [1,2,3]);
+</script>
+<script>
+    const person = {
+        firstName:"John",
+        lastName: "Doe",
+        display: function() {
+            let x = document.getElementById("demo");
+            x.innerHTML = this.firstName + " " + this.lastName;
+        }
+    }
+    person.display();
+</script>
+
+<script>
+    const person = {
+        firstName:"John",
+        lastName: "Doe",
+        fullName: function() {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+
+    const member = {
+        firstName:"Hege",
+        lastName: "Nilsen",
+    }
+
+    let fullName = person.fullName.bind(member);
+
+    document.getElementById("demo").innerHTML = fullName();
+</script>
+
+<script>
+    setTimeout(myFunction, 3000);
+
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "I love You !!";
+    }
+</script>
+
+<script>
+    function myDisplayer(some) {
+        document.getElementById("demo").innerHTML = some;
+    }
+
+    let myPromise = new Promise(function(myResolve, myReject) {
+        let x = 1;
+
+// some code (try to change x to 5)
+
+        if (x == 0) {
+            myResolve("OK");
+        } else {
+            myReject("Error");
+        }
+    });
+
+    myPromise.then(
+        function(value1) {myDisplayer(value1);},
+        function(error) {myDisplayer(error);}
+    );
+</script>
+
+<script>
+    function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            document.getElementById("demo").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "demo_get.asp");
+        xhttp.send();
+    }
+</script>
+
+</body>
+</html>

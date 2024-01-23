@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: powderblue;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: blue;
+        }
+    </style>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111111;
+        }
+    </style>
+
+    <style>
+        .city {
+            background-color: tomato;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .main {
+            text-align: center;
+        }
+    </style>
+
+    <style>
+        .note {
+            font-size: 120%;
+            color: red;
+        }
+    </style>
+
+    <style>
+        #myHeader {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<a href="#C4">Jump to Chapter 4</a>
+
+
+<dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>
+
+<ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+
+<ul style="list-style-type:circle;">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+
+<ul>
+    <li>Coffee</li>
+    <li>Tea
+        <ul>
+            <li>Black tea</li>
+            <li>Green tea</li>
+        </ul>
+    </li>
+    <li>Milk</li>
+</ul>
+
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+
+</br>
+
+<ol type="1">
+    <li>Coffee</li>
+    </br>
+    <li>Tea</li>
+    </br>
+    <li>Milk</li>
+    </br>
+</ol>
+
+</br>
+
+<dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>
+
+
+<p>Hello World</p>
+<div>Hello World</div>
+
+<span>Hello World</span>
+
+<div style="background-color:black;color:white;padding:20px;">
+    <h2>London</h2>
+    <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan
+        area of over 13 million inhabitants.</p>
+    <p>My mother has <span style="color:blue;font-weight:bold;">blue</span> eyes and my father has <span
+            style="color:darkolivegreen;font-weight:bold;">dark green</span> eyes.</p>
+</div>
+
+<div class="city">
+    <h2>London</h2>
+    <p>London is the capital of England.</p>
+</div>
+
+<h1>My <span class="note">Important</span> Heading</h1>
+<p>This is some <span class="note">important</span> text.</p>
+</br>
+<h2 class="city main">London</h2>
+<h2 class="city">Paris</h2>
+<h2 class="city">Tokyo</h2>
+
+<!-- Multiple elements with same class -->
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+
+<iframe src="https://cn.vuejs.org/guide/introduction.html#what-is-vue" style="height:200px;width:300px;"
+        title="Iframe Example"></iframe>
+
+<p id="demo">This is a demonstration.</p>
+
+<img src="demo.png" alt="Mountain">
+
+
+<!-- An element with a unique id -->
+<h1 id="myHeader">My Header</h1>
+<h2 id="C4">Chapter 4</h2>
+<button onclick="myFunction()">Hide elements</button>
+<button onclick="displayResult()">Change text</button>
+<button type="button" onclick="myFunction1()">Click Me!</button>
+<script>
+    function myFunction() {
+        var x = document.getElementsByClassName("city");
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+    }
+</script>
+
+<script>
+    function displayResult() {
+        document.getElementById("myHeader").innerHTML = "Have a nice day!";
+    }
+</script>
+
+<script>
+    function myFunction1() {
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    }
+</script>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+
+</body>
+</html>

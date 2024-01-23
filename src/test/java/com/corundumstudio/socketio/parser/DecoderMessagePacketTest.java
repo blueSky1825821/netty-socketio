@@ -16,7 +16,14 @@
 package com.corundumstudio.socketio.parser;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
+import com.corundumstudio.socketio.protocol.Event;
+import com.corundumstudio.socketio.protocol.JacksonJsonSupport;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufAllocator;
+import io.netty.buffer.ByteBufInputStream;
 import io.netty.buffer.Unpooled;
 import io.netty.util.CharsetUtil;
 import org.junit.Assert;
@@ -31,7 +38,7 @@ public class DecoderMessagePacketTest extends DecoderBaseTest {
 
     @Test
     public void testDecodeId() throws IOException {
-        Packet packet = decoder.decodePackets(Unpooled.copiedBuffer("3:1::asdfasdf", CharsetUtil.UTF_8), null);
+        Packet packet = decoder.decodePackets(Unpooled.copiedBuffer("10:b4451-test,7[b4tt]", CharsetUtil.UTF_8), null);
         Assert.assertEquals(PacketType.MESSAGE, packet.getType());
 //        Assert.assertEquals(1, (long)packet.getId());
 //        Assert.assertTrue(packet.getArgs().isEmpty());
@@ -52,6 +59,29 @@ public class DecoderMessagePacketTest extends DecoderBaseTest {
 //        Assert.assertEquals(5, (long)packet.getId());
 //        Assert.assertEquals(true, packet.getAck());
         Assert.assertEquals("/tobi", packet.getNsp());
+    }
+
+    @Test
+    public void test() {
+        ByteBuf buffer = ByteBufAllocator.DEFAULT.buffer(10);
+        buffer.writeChar('b');
+        buffer.writeChar('b');
+        buffer.writeChar('b');
+        System.out.println(buffer.toString(StandardCharsets.UTF_8));
+        buffer.clear();
+        buffer.resetWriterIndex();
+        byte[] by = new byte[] { (byte) 192 };
+        buffer.writeBytes(by);
+        System.out.println(buffer.toString(StandardCharsets.UTF_8));
+
+    }
+
+    @Test
+    public void testJson() throws IOException {
+        String s = "\"name\":\"chatevent\",\"evnetname\":\"chatevent\"";
+        Event event = new JacksonJsonSupport().readValue("", new ByteBufInputStream(Unpooled.copiedBuffer(s, CharsetUtil.UTF_8)), Event.class);
+        new ObjectMapper().readValue(s, Event.class);
+        System.out.println(event);
     }
 
 }

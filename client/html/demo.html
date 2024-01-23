@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="icon" type="image/x-icon" href="demo.png">
+
+
+    <!--    <style>-->
+    <!--        body {background-color: powderblue;}-->
+    <!--        h1   {color: blue;}-->
+    <!--        p    {color: red;}-->
+    <!--    </style>-->
+    <style>
+        /*table, th, td {*/
+        /*    border: 1px solid black;*/
+        /*    border-collapse: collapse;*/
+        /*}*/
+        /*th, td {*/
+        /*    background-color: #96D4D4;*/
+        /*    border-radius: 10px;*/
+        /*    border-style: dotted;*/
+        /*    padding: 30px;*/
+        /*}*/
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th:nth-child(even), td:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+
+        tr:hover:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
+        }
+
+        th:nth-child(even), td:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body style="background-color: powderblue">
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<p title="About W3Schools"> W3Schools is a web developer's site.</p>
+
+
+<a href="https://www.w3schools.com">This is a link</a>
+
+
+<!--alt 是当图片无法正常现实时展示-->
+<img src="demo.png" alt="W3Schools.com" width="104" height="142">
+
+
+<p style="color:red;">This is a red paragraph.</p>
+
+<p title="About W3Schools">
+    You cannot omit quotes around an attribute value
+    if the value contains spaces.
+</p>
+
+<h1 style="font-size:60px;">Heading 1</h1>
+
+<h1>This is heading 1</h1>
+<p>This is some text.</p>
+<hr>
+<h2>This is heading 2</h2>
+<p>This is some other text.</p>
+<hr>
+
+<p style="background-color:tomato;">This is<br>a paragraph<br>with line breaks.</p>
+
+<pre>
+  My Bonnie lies over the ocean.
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre>
+
+<h1 style="font-family:Verdana,serif;">This is a heading</h1>
+<p style="font-family:'Courier New',serif;">This is a paragraph.</p>
+
+<i>This text is italic</i>
+
+<em>This text is emphasized</em>
+
+<small>This is some smaller text.</small>
+
+<p>Do not forget to buy
+    <mark>milk</mark>
+    today.
+</p>
+
+<p>My favorite color is
+    <del>blue</del>
+    red.
+</p>
+
+<p>My favorite color is
+    <del>blue</del>
+    <ins>red</ins>
+    .
+</p>
+
+<p>This is <sub>subscripted</sub> text.</p>
+
+<p>This is <sup>superscripted</sup> text.</p>
+
+<p>Here is a quote from WWF's website:</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+    For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF
+    works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver
+    innovative solutions that protect communities, wildlife, and the places in which they live.
+</blockquote>
+
+<p>For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF
+    works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver
+    innovative solutions that protect communities, wildlife, and the places in which they live.</p>
+
+
+<!--q 双引号-->
+<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+<p>WWF's goal is to: Build a future where people live in harmony with nature.</p>
+
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+<addres>
+    Written by John Doe.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+</addres>
+
+<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+<bdo dir="rtl">This text will be written from right to left</bdo>
+
+<h1 style="background-color:DodgerBlue;">Hello World</h1>
+<p style="background-color:Tomato;">Lorem ipsum...</p>
+
+<h1 style="color:Tomato;">Hello World</h1>
+<p style="color:DodgerBlue;">Lorem ipsum...</p>
+<p style="color:MediumSeaGreen;">Ut wisi enim...</p>
+
+<h1 style="border:2px solid Tomato;">Hello World</h1>
+<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+<h1 style="border:2px solid Violet;">Hello World</h1>
+
+<h1 style="background-color:rgb(255, 99, 71);">...</h1>
+<h1 style="background-color:#ff6347;">...</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+
+<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
+
+<h1 style="color:blue;">A Blue Heading</h1>
+
+<p style="color:red;">A red paragraph.</p>
+
+<a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
+
+<a href="https://www.w3schools.com/" target="_top">Visit W3Schools!</a>
+
+<h2>Absolute URLs</h2>
+<p><a href="https://www.w3.org/">W3C</a></p>
+<p><a href="https://www.google.com/">Google</a></p>
+
+<h2>Relative URLs</h2>
+<p><a href="html_images.asp">HTML Images</a></p>
+<p><a href="/css/default.asp">CSS Tutorial</a></p>
+
+
+<a href="default.asp">
+    <img src="demo.png" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+<button onclick="document.location='default.asp'">HTML Tutorial</button>
+
+<a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+
+<img src="demo.png" alt="Girl in a jacket" style="width:500px;height:600px;">
+<img src="demo.png" alt="Girl in a jacket" width="500" height="600">
+
+<a href="default.asp">
+    <img src="demo.png" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+<p/>
+<hr/>
+<p/>
+
+<p><img src="demo.png" alt="Smiley face" style="float:right;width:42px;height:42px;">
+    The image will float to the right of the text.</p>
+
+<p><img src="demo.png" alt="Smiley face" style="float:left;width:42px;height:42px;">
+    The image will float to the left of the text.</p>
+
+
+<table style="width:100%">
+    <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    <tr style="height:200px">
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th colspan="2">Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+</table>
+
+<table>
+    <colgroup>
+        <col span="2">
+        <col span="3" style="visibility: collapse">
+    </colgroup>
+    <tr>
+        <th>MON</th>
+        <th>TUE</th>
+        <th>WED</th>
+        <th>THU</th>
+    </tr>
+</table>
+
+<a href="list.html#C4">Jump to Chapter 4</a>
+
+</body>
+</html>
